@@ -35,7 +35,7 @@ const NavBar = ({ lable }: { lable: string }) => {
                         <li key={item.title}>
                             <Link
                                 href={item.href}
-                                className={`text-sm font-semibold tracking-widest uppercase transition-colors duration-300 hover:text-primaryColor  ${lable === item.title ? 'text-primaryColor' : 'text-primaryFontColor'}`}
+                                className={`text-sm font-semibold tracking-widest capitalize transition-colors duration-300 hover:text-primaryColor  ${lable === item.title ? 'text-primaryColor' : 'text-primaryFontColor'}`}
                             >
                                 {item.title}
                             </Link>

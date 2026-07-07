@@ -17,6 +17,47 @@ const AboutHero = () => {
         },
 
     ]
+
+    const faculty = [
+        {
+            title: 'Mathematics & Logic',
+            name: 'Ranjeet Yadav',
+            description: 'With over 20 years of research in discrete mathematics, Dr. Vance brings an unparalleled depth of logic and precision to our curriculum.',
+            img: '/img/f1.jpg'
+        },
+        {
+            title: 'Computational Science',
+            name: 'Sandeep Yadav',
+            description: 'Prof. Thorne specializes in algorithmic thinking and AI. He leads our digital transformation workshops for secondary students.',
+            img: '/img/f2.jpg'
+        },
+        {
+            title: 'Humanities & Rhetoric',
+            name: 'Manjeet Yadav',
+            description: 'A champion of critical discourse, Sarah helps students master the art of persuasive writing and ethical debate.',
+            img: '/img/f3.jpg'
+        },
+    ]
+
+    const data = [
+        {
+            value: '98%',
+            label: "Success Rate"
+        },
+        {
+            value: '12+',
+            label: "Years Experience"
+        },
+        {
+            value: '5000+',
+            label: "Students Taught"
+        },
+        {
+            value: '45',
+            label: "Expert Mentors"
+        },
+    ]
+
     return (
         <>
             <div className='w-full bg-light-blue'>
@@ -61,6 +102,47 @@ const AboutHero = () => {
                             </Button>
                             <h3 className='text-lg font-semibold text-primaryFontColor'>{item?.title}</h3>
                             <p className='text-secondaryFontColor md:text-base text-sm leading-relaxed text-left'>{item?.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <div className='w-full bg-tertiary'>
+                <div className='md:max-w-7xl md:mx-auto w-full md:py-20 py-5 md:px-0 px-4'>
+                    <div className="max-w-3xl space-y-2">
+                        <h2 className='text-3xl font-semibold text-primaryFontColor'>Our Expert Faculty</h2>
+                        <p className='text-secondaryFontColor md:text-base text-sm leading-relaxed text-left'>Learn from world-class educators, researchers, and mentors who are passionate about student growth.</p>
+                    </div>
+                    <div className="grid md:grid-cols-3 grid-cols-1 md:gap-8 gap-4 mt-4">
+                        {
+                            faculty.map((item, index) => (
+                                <div key={index} className="space-y-3 w-80 min-h-[300px] mx-auto">
+                                    <Image
+                                        src={item?.img}
+                                        alt="about"
+                                        width={1000}
+                                        height={1000}
+                                        className='h-80 w-full object-cover rounded-xl'
+                                        priority
+                                    />
+                                    <div className=''>
+                                        <h3 className='uppercase text-[10px] font-semibold text-secondaryColor tracking-wider'>{item.title}</h3>
+                                        <h2 className='text-base text-primaryFontColor font-semibold'>{item.name}</h2>
+                                        <p className='md:text-sm mt-1 text-xs text-secondaryFontColor leading-relaxed'>{item.description}</p>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div className='w-full bg-primaryColor'>
+                <div className='md:max-w-7xl md:mx-auto w-full md:py-20 py-5 md:px-0 px-4 flex md:flex-row flex-col gap-5 items-center justify-around'>
+                    {data.map((item, index) => (
+                        <div key={index} className="flex flex-col justify-center items-center ">
+                            <h3 className='text-5xl font-bold text-tertiary'>{item.value}</h3>
+                            <h3 className='uppercase text-xs text-tertiary'>{item.label}</h3>
                         </div>
                     ))}
                 </div>

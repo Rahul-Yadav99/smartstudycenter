@@ -1,9 +1,13 @@
+'use client'
 import { Dot, TrendingUp, Video } from 'lucide-react'
 import React from 'react'
 import { Button } from './ui/button'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 const Hero = () => {
+    const router = useRouter();
+
     return (
         <div className="w-full bg-light-blue/50">
             <div className='md:max-w-7xl mx-auto md:py-20 py-5 flex md:flex-row flex-col gap-4'>
@@ -18,7 +22,7 @@ const Hero = () => {
                     </p>
                     <div className="md:space-x-6 space-x-2 flex items-center">
                         <Button className='bg-primaryColor hover:bg-primaryColor/90 cursor-pointer text-white'>Explore Programs</Button>
-                        <Button variant='outline' className='cursor-pointer text-primaryFontColor'><Video />Video Tutorials</Button>
+                        <Button onClick={() => router.push('/videos')} variant='outline' className='cursor-pointer text-primaryFontColor'><Video />Video Tutorials</Button>
                     </div>
                 </div>
                 <div className="md:w-[50%] w-full space-y-4 bg-white p-2 rounded-3xl border border-gray-100 shadow-2xl relative">

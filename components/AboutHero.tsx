@@ -138,9 +138,9 @@ const AboutHero = () => {
             </div>
 
             <div className='w-full bg-primaryColor'>
-                <div className='md:max-w-7xl md:mx-auto w-full md:py-20 py-5 md:px-0 px-4 flex md:flex-row flex-col gap-5 items-center justify-around'>
+                <div className='md:max-w-7xl md:mx-auto w-full md:py-20 py-5 md:px-0 px-4 grid md:grid-cols-4 grid-cols-2 gap-6'>
                     {data.map((item, index) => (
-                        <div key={index} className="flex flex-col justify-center items-center ">
+                        <div key={index} className="flex flex-col justify-center items-center">
                             <h3 className='text-5xl font-bold text-tertiary'>{item.value}</h3>
                             <h3 className='uppercase text-xs text-tertiary'>{item.label}</h3>
                         </div>

@@ -45,7 +45,7 @@ const NavBar = ({ lable }: { lable: string }) => {
 
                 {/* Desktop Button */}
                 <Button
-                    onClick={() => router.push('/inquiry')}
+                    onClick={() => router.push('/contact')}
                     className='hidden md:flex bg-primaryColor hover:bg-primaryColor/90 cursor-pointer'
                 >
                     Contact Us
@@ -77,7 +77,7 @@ const NavBar = ({ lable }: { lable: string }) => {
                         </Link>
                     ))}
                     <Button
-                        onClick={() => { router.push('/inquiry'); setIsOpen(false) }}
+                        onClick={() => { router.push('/contact'); setIsOpen(false) }}
                         className='rounded-2xl px-8 py-2 border border-primaryColor text-white hover:bg-primaryColor hover:text-primaryColor font-semibold cursor-pointer bg-primaryColor w-full mt-2'
                     >
                         Contact Us
